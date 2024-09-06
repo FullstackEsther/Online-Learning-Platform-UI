@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Builder</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="course-builder">
+        <header class="header">
+            <div class="logo">Course Curriculum</div>
+        </header>
+        <div class="content">
+            <div id="modules-container"></div>
+            <button class="btn add-module" onclick="showModuleForm()"><i class='bx bx-plus'></i>Module</button>
+        </div>
+    </div>
+
+    <!-- Module Form Modal -->
+    <div id="module-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModuleForm()">&times;</span>
+            <h2>Add Module</h2>
+            <form id="module-form">
+                <label for="module-title">Module Title:</label>
+                <input type="text" id="module-title" name="module-title" required>
+                
+                <button type="submit">Add Module</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Lesson Form Modal -->
+    <div id="lesson-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLessonForm()">&times;</span>
+            <h2>Add Lesson</h2>
+            <form id="lesson-form">
+                <label for="lesson-title">Lesson Title:</label>
+                <input type="text" id="lesson-title" name="lesson-title" required>
+
+                <label for="lesson-video">Upload Video:</label>
+                <input type="file" id="lesson-video" name="lesson-video" accept="video/*" required>
+
+                <label for="lesson-article">Optional Article:</label>
+                <textarea id="lesson-article" name="lesson-article" rows="4"></textarea>
+
+                <label for="lesson-duration">Duration (minutes):</label>
+                <input type="number" id="lesson-duration" name="lesson-duration" required>
+
+                <button type="submit">Add Lesson</button>
+            </form>
+        </div>
+    </div>
+     <!-- Lesson Video Form Modal -->
+     <div id="lesson-video-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLessonVideoForm()">&times;</span>
+            <form id="lesson-video-form">
+                <h2>Edit Lesson Video</h2>
+                <label for="edit-lesson-video">Video:</label>
+                <input type="file" id="edit-lesson-video" name="edit-lesson-video" accept="video/*" required>
+                <button type="submit">Edit Video</button>
+            </form>
+        </div>
+    </div>
+     <!-- Edit Lesson Form Modal -->
+     <div id="edit-lesson-form-modal" class="modal">
+        <span class="close" onclick="closeEditLessonForm()">&times;</span>
+        <form id="edit-lesson-form">
+            <h2>Edit Lesson Form</h2>
+            <label for="lesson-title">Title:</label>
+            <input type="text" id="lesson-title" name="lesson-title" required>
+            <label for="lesson-article">Article:</label>
+            <textarea id="lesson-article" name="lesson-article"></textarea>
+            <label for="lesson-duration">Duration (minutes):</label>
+            <input type="number" id="lesson-duration" name="lesson-duration" required>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+
+     <!-- Quiz Form Modal -->
+     <div id="quiz-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuizForm()">&times;</span>
+            <form id="quiz-form">
+                <h2>Add Quiz</h2>
+                <label for="quiz-duration">Duration (minutes):</label>
+                <input type="number" id="quiz-duration" name="quiz-duration" required>
+                <button type="submit">Add Quiz</button>
+            </form>
+        </div>
+    </div>
+    <!-- Question Form Modal -->
+    <div id="question-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuestionForm()">&times;</span>
+            <form id="question-form">
+                <h2>Add Question</h2>
+                <label for="question-text">Question:</label>
+                <input type="text" id="question-text" name="question-text" required>
+                <label for="question-type">Answer Type:</label>
+                <select id="question-type" name="question-type" required>
+                    <!-- <option value="single">Single Choice</option>
+                    <option value="multiple">Multiple Choice</option> -->
+                </select>
+                <button type="submit">Add Question</button>
+            </form>
+        </div>
+    </div>
+    <!-- Option Form Modal -->
+    <div id="option-form-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOptionForm()">&times;</span>
+            <form id="option-form">
+                <h2>Add Option</h2>
+                <label for="option-text">Option:</label>
+                <input type="text" id="option-text" name="option-text" required>
+                <label for="option-correct">Correct:</label>
+                <select id="option-correct" name="option-correct" required>
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+                <button type="submit">Add Option</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

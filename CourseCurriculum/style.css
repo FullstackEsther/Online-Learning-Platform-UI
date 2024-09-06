@@ -1,0 +1,299 @@
+/* Basic styling for the course builder */
+.course-builder {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Header styling */
+.header {
+    /* background-color: #f8f9fa; */
+    background-color: #dbdbdb;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+body{
+    width: 70%;
+    margin: 0 205px 0 205px;
+    background-color: #f3f0f3;
+}
+
+/* Content area */
+.content {
+    margin-top: 20px;
+}
+
+/* Button styling */
+.btn {
+    /* background-color: #007bff; */
+    color: #77118b;
+    border: 1px solid #77118b ;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #77118b;
+    color: #fff;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#module-title{
+    width: 97.5%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Module styling */
+.module {
+    border: 2px solid #77118b;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff; 
+}
+
+.module .section-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.module-actions {
+    margin-top: 10px;
+}
+
+.module-actions button {
+    margin-right: 5px;
+}
+
+/* Lesson styling */
+.lesson {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    /* background-color: #f8f9fa;  */
+    background-color:#dbdbdb;
+}
+
+.lesson-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+.lesson-actions {
+    margin-top: 10px;
+}
+
+.lesson-actions button {
+    margin-right: 5px;
+}
+.quiz{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+}
+.question{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    /* background-color: #eae8e8; */
+    background-color:#dbdbdb;
+}
+.option{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+/* General Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="file"],
+form textarea,
+form select,
+form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #77118b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #77118b;
+}
+
+/* Module Form Modal */
+#module-form-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+#module-form-modal .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+}
+
+/* Lesson Form Modal */
+#lesson-form-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+/* #edit-lesson-form-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+} */
+/* #edit-lesson-form-modal .modal-content{
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px; 
+} */
+
+#edit-lesson-form{
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px; 
+}
+
+
+#quiz-form-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+#quiz-form-modal .modal-content{
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px; 
+}
+#lesson-form-modal .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+}
+
+/* Styling for Video Upload in Lesson Form */
+#lesson-video {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+
+
+/* Optional Article Styling */
+#lesson-article {
+    min-height: 100px;
+    resize: vertical;
+    background-color: #f9f9f9;
+}
