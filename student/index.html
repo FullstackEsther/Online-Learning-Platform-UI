@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Student Dashboard</title>
+</head>
+
+<body>
+    <!-- Side bar starts -->
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <i class='bx bxs-smile'></i>
+            <span class="text">Student</span>
+        </a>
+        <ul class="side-menu top ">
+            <li class="active">
+                <a href="#">
+                    <i class="bx bxs-dashboard"></i>
+                    <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="/HomePage/index.html">
+                    <i class='bx bx-home'></i>
+                    <span class="text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" id ="get-profile" >
+                    <i class="bx bxs-cog"></i>
+                    <span class="text">Profile Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="/ViewResult/index.html" id ="get-result" >
+                    <i class="bx bxs-book"></i>
+                    <span class="text">View Result</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout" id="logout">
+                    <i class="bx bxs-log-out-circle"></i>
+                    <span class="text">Logout</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- side bar ends -->
+
+
+    <!-- content starts -->
+    <section id="content">
+        <!-- navbar starts -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <a href="#" class="nav-link">Categories</a>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Search...">
+                    <button type="submit" class="search-btn"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <a href="#" class="notification">
+                <i class='bx bx-bell'></i>
+                <span class="num">8</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="/QuizPage/Images/background.jpg" alt="">
+            </a>
+        </nav>
+        <!-- navbar ends-->
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h1>Dashboard</h1>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li><i class="bx bx-chevron-right"></i></li>
+                        <li>
+                            <a class="active" href="/HomePage/index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="box-info">
+                <li>
+                    <i class="bx bxs-calendar-check"></i>
+                    <span class="text">
+                        <h3>1024</h3>
+                        <p>Courses</p>
+                    </span>
+                </li>
+                <li>
+                    <i class="bx bxs-group"></i>
+                    <span class="text">
+                        <h3>250</h3>
+                        <p>Students</p>
+                    </span>
+                </li>
+                <li>
+                    <i class="bx bxs-group"></i>
+                    <span class="text">
+                        <h3>50+</h3>
+                        <p>Intructors</p>
+                    </span>
+                </li>
+            </ul>
+            <div class="main-content">
+                <div class="courses-section">
+                    <div class="courses">
+                        <!-- <div class="course" data-progress="25" data-course="course1.html">
+                            <img src="/QuizPage/Images/background.jpg" alt="Course 1">
+                            <div class="course-info">
+                                <h4>Figma for Beginners</h4>
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <p class="progress-text"></p>
+                            </div>
+                        </div>
+                        <div class="course" data-progress="50" data-course="course2.html">
+                            <img src="/QuizPage/Images/Another.jpg" alt="Course 2">
+                            <div class="course-info">
+                                <h4>Complete Web Design</h4>
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <p class="progress-text"></p>
+                            </div>
+                        </div>
+                        <div class="course" data-progress="85" data-course="course3.html">
+                            <img src="course3.jpg" alt="Course 3">
+                            <div class="course-info">
+                                <h4>Figma 2023</h4>
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <p class="progress-text"></p>
+                            </div>
+                        </div>
+                        <div class="course" data-progress="75" data-course="course4.html">
+                            <img src="course4.jpg" alt="Course 4">
+                            <div class="course-info">
+                                <h4>Managing Projects with Notion</h4>
+                                <div class="progress-bar">
+                                    <div class="progress"></div>
+                                </div>
+                                <p class="progress-text"></p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- content ends -->
+</body>
+<script src="script.js"></script>
+<script src="/Profile/script.js"></script>
+
+</html>
