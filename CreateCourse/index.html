@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="menu">
+                <h2 class="logo">SoftLearn</h2>
+                <a href="/InstructorDashboard/instructor.html"><button class="button">Exit</button></a>
+            </div>
+            <!-- <div class="line"></div> -->
+        </div>
+        
+        <header id="header-1" class="header--1">
+            <h1>How about a working title?</h1>
+            <p>It's ok if you can't think of a good title now. You can change it later.</p>
+            <div class="content">
+                <input name="title" type="text" placeholder="e.g.Learn Photoshop CS6 from Scratch">
+            </div>
+        </header>
+
+        <header id="header-2" class="header--2 hidden">
+            <h1>Select an image for your course</h1>
+            <p>Upload an image that represents the main topic of your course.</p>
+            <div class="content">
+                <input name="displayPicture" type="file" accept="image/*">
+            </div>
+        </header>
+
+        <header id="header-3" class="header--3 hidden">
+            <h1>What to learn</h1>
+            <p></p>
+            <div class="content">
+                <textarea name="whatToLearn" type="text" placeholder="What are your student going to learn from the Course"></textarea>
+            </div>
+        </header>
+        
+        <header id="header-4" class="header--4 hidden">
+            <h1>Select Level</h1>
+            <label for="level">Select The Course Level</label>
+            <select name="level" id="level">            </select>
+        </header>
+
+        <header id="header-7" class="header--7 hidden">
+            <h1>Select Course Status</h1>
+            <label for="status">Select The Course Status</label>
+            <select name="status" id="status">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </header>
+
+        <header id="header-5" class="header--5 hidden">
+            <h1>Category</h1>
+            <label for="category">Select Category</label>
+            <select name="category" id="category">
+                
+            </select>
+        </header>
+        
+        <header id="header-6" class="header--6 hidden">
+            <h1>Your Course Code</h1>
+            <div class="content">
+                <input name="courseCode" type="text" placeholder="e.g.Input your course Code">
+            </div>
+        </header>
+
+        <header id="header-8" class="header--8 hidden">
+            <h1>Set Your Course Price</h1>
+            <label for="price">Course Price</label>
+            <div class="content">
+                <input type="number" id="price" name="price" placeholder="e.g. 49.99" >
+            </div>
+        </header>
+        
+
+        <div class="bottom-navbar">
+            <button class="btn previous">Previous</button>
+            <button class="btn continue">Continue</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</body>
+</html>
