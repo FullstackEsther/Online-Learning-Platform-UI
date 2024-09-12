@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --light: #f9f9f9;
+    --purple: #77118b;
+    --light-purple: #e0cee2;
+    --red: #DB504A;
+}
+
+
+.table-data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 24px;
+    width: 100%;
+    color: var(--dark);
+}
+
+.table-data>div {
+    border-radius: 20px;
+    background: var(--light);
+    padding: 24px;
+    overflow-x: auto;
+}
+
+.table-data .head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    /* min-width: 420px; */
+}
+
+.table-data .head h3 {
+    margin-right: auto;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.table-data .head .bx {
+    cursor: pointer;
+}
+
+.table-data .courses {
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+
+.table-data .courses table {
+    width: 100%;
+    border-collapse: collapse;
+    /* min-width: 420px; */
+}
+
+.table-data .courses table th {
+    padding-bottom: 12px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey);
+    /* font-weight: 600; */
+}
+
+.table-data .courses table td {
+    padding: 16px 0;
+}
+
+.table-data .courses table tr td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 6px;
+}
+
+.table-data .courses table tr td .status {
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--light);
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.table-data .courses table tr td .status.verified {
+    background: var(--purple);
+}
+
+.table-data .courses table tr td .status.unverified {
+    background: var(--red);
+}
+
+.table-data .courses table td img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.table-data .courses table tbody tr:hover {
+    background: var(--grey);
+}
