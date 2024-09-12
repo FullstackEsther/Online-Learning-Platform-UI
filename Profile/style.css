@@ -1,0 +1,61 @@
+body {
+    background: #faedf9 !important;
+    margin-top: 20px;
+}
+
+.ui-w-80 {
+    width: 80px !important;
+    height: auto;
+}
+
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1) !important;
+    background: rgba(0, 0, 0, 0) !important;
+    color: #4E5155 !important;
+}
+
+label.btn {
+    margin-bottom: 0;
+}
+
+.btn-outline-primary {
+    border-color: #77118b !important;
+    background: transparent !important;
+    color: #77118b !important;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text-light {
+    color: #babbbc !important;
+}
+
+.card {
+    background-clip: padding-box;
+    box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+.account-settings-fileinput {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+/* New CSS for active tab color */
+.list-group-item-action.active {
+    background-color: #77118b !important;
+    border-color: #77118b !important;
+}
+
+.list-group-item-action.active:hover {
+    background-color: #77118b !important;
+    border-color: #77118b !important;
+}
