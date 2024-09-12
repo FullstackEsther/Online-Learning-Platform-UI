@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="box" id="questionScreen">
+        <div class="title">
+            Module Quiz
+        </div>
+            <div class="header">
+                <div class="scoreBox"> Score : </div>
+                <div class="timerBox">Time Left : <span></span></div>
+            </div>
+                <div class="questionBox">
+                </div>
+                <div class="optionBox">
+                    <!-- <label><input type="checkbox" class="optionCheckbox" value=""><span></span></label>
+                    <label><input type="checkbox" class="optionCheckbox" value=""><span></span></label>
+                    <label><input type="checkbox" class="optionCheckbox" value=""><span></span></label>
+                    <label><input type="checkbox" class="optionCheckbox" value=""><span></span></label> -->
+                </div>
+                <div class="footer">
+                    <button onclick="showNext()">
+                        Next
+                    </button>
+                    <button onclick="showResult()" id="submitButton">
+                        Submit
+                    </button>
+                </div>
+    </div>
+    <div class="box" id="resultScreen"style = "display: none;">
+        <div class="title">
+            Module Quiz Result
+        </div>
+        <div class="resultBox">
+           <label>Questions</label> 
+           <span id="totalQuestion">0</span>
+           <label>Result</label> 
+           <span id="Score">0</span>
+        </div>
+        <div class="buttonBox">
+            <a href="/student/index.html">Go back</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
