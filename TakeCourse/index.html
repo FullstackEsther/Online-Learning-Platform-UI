@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Content Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="back-button" >← Back</button>
+            <div class="course-title" id="course-title"></div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content-area">
+            <video id="video-player" controls controlsList="nodownload">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="article-container">
+            </div>
+
+            <button class="next-button" onclick="moveToNext()">Next</button>
+        </div>
+
+        <aside class="course-content" id="course-content">
+            <h2>Course content</h2>
+            <!-- <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">Section 1: What is NetDevOps?</div>
+                <ul class="lessons">
+                    <li data-video-src="video1.mp4" data-article-src="article1.html">Lesson 1: Introduction</li>
+                    <li data-video-src="video2.mp4">Lesson 2: Basic Concepts</li>  This lesson has no article -->
+                    <!-- <button class="quiz-button" onclick="goToQuiz()">Take Quiz</button>
+                </ul>
+                
+            </div>
+            <div class="section">
+                <div class="section-title" onclick="toggleSection(this)">Section 2: NETCONF, RESTCONF, YANG Demos</div>
+                <ul class="lessons">
+                    <li onclick="loadLesson('video1.mp4', 'Lesson 1: Introduction', 'video')" data-src="video1.mp4" data-type="video">Lesson 1: Introduction</li>
+                    <li onclick="loadLesson('video2.mp4', 'Lesson 2: Basic Concepts', 'video')" data-src="video2.mp4" data-type="video">Lesson 2: Basic Concepts</li>
+                    <button class="quiz-button" onclick="goToQuiz()">Take Quiz</button>  
+                </ul> 
+                             
+            </div> --> 
+            <!-- Add more sections and lessons as needed -->
+        </aside>
+    </div>
+
+    <footer>
+        <div class="course-info">
+            <p>Learn Cisco Network DevOps: ACI, Ansible, C#, SDN, Kubernetes, Docker, Containers, NETCONF; includes free labs!</p>
+            <p><span>4.8</span> | 117,915 students | 19.5 hours total</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #ebe8eb;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.back-button {
+    background-color: #77118b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #5e0c6b;
+}
+
+.course-title {
+    font-size: 24px;
+    color: #151415;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 1400px; /* Increased the maximum width */
+}
+
+/* Content Area Styling */
+.content-area {
+    flex-grow: 2; /* Reduced flex-grow to give more space to course content */
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-player{
+    width: 100%;
+    max-width: 800px; 
+    height: 450px; 
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.video-player video {
+    width: 640px; 
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* .video-player video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+} */
+.article-container {
+    display: none; /* Hide by default */
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.next-button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #77118b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.next-button:hover {
+    background-color: #5e0c6b;
+}
+
+/* Sidebar (Course Content) Styling */
+.course-content {
+    flex-grow: 1; /* Increased flex-grow to give more space to course content */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.section-title:hover {
+    background-color: #e0e0e0;
+}
+
+.lessons {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.lessons li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.lessons li:hover {
+    border-left: 3px solid #77118b;
+    background-color: #f0f0f0;
+}
+
+/* Quiz Button Styling */
+.quiz-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #77118b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.quiz-button:hover {
+    background-color: #5e0c6b;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #77118b;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+footer span {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .content-area {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .back-button {
+        font-size: 16px;
+    }
+
+    .video-player,
+    .article-container {
+        height: 300px;
+    }
+
+    .next-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

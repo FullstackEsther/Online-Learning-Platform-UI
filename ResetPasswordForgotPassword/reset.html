@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Confirm Password Validation</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Create new password</h1>
+        <p>Your new password must be different <br> from previous used password.</p>
+        <form action="#">
+            <div class="new-password">
+                <h3>New Password</h3>
+                <input type="password" class="new-pass-input" placeholder="Create Password">
+                <i class="fa-regular fa-eye eye"></i>
+                <i class="fa-regular fa-eye-slash eye-slash"></i>
+                <p>Must be atleast 8 characters</p>
+            </div>
+            <div class="confirm-password">
+                <h3>Confirm Password</h3>
+                <input type="password" class="confirm-pass-input" placeholder="Confirm Password" disabled>
+            </div>
+            <p class="msg">Both passwords must match.</p>
+            <button class="submit-btn"> Submit</button>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
