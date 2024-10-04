@@ -27,66 +27,65 @@ function getToken() {
 
 function storeToken(token) {
     localStorage.setItem('authToken', token);
-    console.log('Token stored:', token);
 }
 
 function getToken() {
     return localStorage.getItem('authToken');
 }
 
-async function assignRole(roleName, token) {
-    try {
-        const response = await fetch(`https://localhost:7290/api/User/assignrole?roleName=${encodeURIComponent(roleName)}`, {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}` 
-            }
-        });
+// async function assignRole(roleName, token) {
+//     try {
+//         const response = await fetch(`https://localhost:7290/api/User/assignrole?roleName=${encodeURIComponent(roleName)}`, {
+//             method: 'POST',
+//             headers: {
+//                 "Content-Type": "application/json",
+//                 "Authorization": `Bearer ${token}` 
+//             }
+//         });
 
-        if (!response.ok) {
-            let errorMessage = `Error: ${response.status}`;
-            const contentType = response.headers.get("Content-Type");
+//         if (!response.ok) {
+//             let errorMessage = `Error: ${response.status}`;
+//             const contentType = response.headers.get("Content-Type");
 
-            if (contentType && contentType.includes("application/json")) {
-                try {
-                    const errorData = await response.json();
-                    switch (response.status) {
-                        case 400:
-                            errorMessage = `Bad Request: ${errorData.message}`;
-                            break;
-                        case 404:
-                            errorMessage = `Not Found: ${errorData.message}`;
-                            break;
-                        case 409:
-                            errorMessage = `Conflict: ${errorData.message}`;
-                            break;
-                        case 500:
-                            errorMessage = `Internal Server Error`;
-                            break;
-                        default:
-                            errorMessage = `Error: Internal Error`;
-                            break;
-                    }
-                } catch (jsonError) {
-                    errorMessage = `Failed to parse error response`;
-                }
-            } else {
-                const textData = await response.text();
-                errorMessage = `Error: ${textData || 'Unknown error'}`;
-            }
+//             if (contentType && contentType.includes("application/json")) {
+//                 try {
+//                     const errorData = await response.json();
+//                     switch (response.status) {
+//                         case 400:
+//                             errorMessage = `Bad Request: ${errorData.message}`;
+//                             break;
+//                         case 404:
+//                             errorMessage = `Not Found: ${errorData.message}`;
+//                             break;
+//                         case 409:
+//                             errorMessage = `Conflict: ${errorData.message}`;
+//                             break;
+//                         case 500:
+//                             errorMessage = `Internal Server Error`;
+//                             break;
+//                         default:
+//                             errorMessage = `Error: Internal Error`;
+//                             break;
+//                     }
+//                 } catch (jsonError) {
+//                     errorMessage = `Failed to parse error response`;
+//                 }
+//             } else {
+//                 const textData = await response.text();
+//                 errorMessage = `Error: ${textData || 'Unknown error'}`;
+//             }
 
-            throw new Error(errorMessage);
-        }
+//             throw new Error(errorMessage);
+//         }
 
-        return true;
+//         return response.json();
 
-    } catch (error) {
-        console.error('Role assignment failed:', error.message);
-        alert(error.message);
-        throw error;
-    }
-}
+//     } catch (error) {
+//         console.error('Role assignment failed:', error.message);
+//         alert(error.message);
+//         throw error;
+//     }
+// }
 
 
 
@@ -164,7 +163,9 @@ async function login(username, password) {
         if (isInstructor) {
             console.log("entered");
             const regeneratedToken = await assignRole('Instructor', token);
-            storeToken(regeneratedToken);
+            storeToken(regeneratedToken.token);
+            console.log(regeneratedToken.token);
+            console.log(getToken());
             userRoles.push('Instructor');
             localStorage.removeItem('instructorApplication');
             console.log('Instructor role assigned successfully');
@@ -173,8 +174,8 @@ async function login(username, password) {
         if (userRoles.length === 0) {
             console.log("entered");
             const regeneratedToken = await assignRole('Student', token);
-            storeToken(regeneratedToken);
-            console.log(regeneratedToken);
+            storeToken(regeneratedToken.token);
+            console.log(regeneratedToken.token);
             userRoles.push('Student');
 
         }
@@ -193,7 +194,7 @@ async function login(username, password) {
     }
 }
 
-async function assignStudentRole(roleName, token) {
+async function assignRole(roleName, token) {
     try {
         const response = await fetch(`https://localhost:7290/api/User/assignrole?roleName=${encodeURIComponent(roleName)}`, {
             method: 'POST',
@@ -237,8 +238,8 @@ async function assignStudentRole(roleName, token) {
 
             throw new Error(errorMessage);
         }
-
-        return response.json();
+        
+        return await response.json();
 
     } catch (error) {
         console.error('Role assignment failed:', error.message);

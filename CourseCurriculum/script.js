@@ -195,7 +195,7 @@ async function handleModuleFormSubmit(event) {
             module.innerHTML = `
         <span class="lesson-number">Module ${moduleIdCount++}:</span>
            <h2 class="section-title">
-             Title: <span class="module-title">${module.title}</span>
+             Title: <span class="module-title">${moduleData.title}</span>
              </h2>
             <div class="module-actions">
                 <button class="edit" onclick="showEditModuleForm(this)"><i class='bx bxs-edit-alt'></i></button>

@@ -139,8 +139,10 @@ async function createCourse(title, level, categoryId, courseCode, displayPicture
     if (!response.ok) {
       throw new Error(`Failed to create course: ${response.statusText}`);
     }
-    window.location.href("/instructorDashboard/instructor.html");
+    window.location.href = "/instructorDashboard/instructor.html";
+
     return await response.json();
+    
   } catch (error) {
     console.error('Course Creation Failed :', error.message);
     alert(error.message);
